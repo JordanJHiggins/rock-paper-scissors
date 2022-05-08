@@ -32,6 +32,7 @@ let tie = 0;
 let playerScore = 0;
 let computerScore = 0;
 // plays five rounds
+/*
 function game() {
   for (let i = 0; i < 5; i++) {
     let playerSelection = window.prompt("Make a selection");
@@ -42,6 +43,7 @@ function game() {
     playRound(playerSelection, computerSelection);
   }
 }
+*/
 // determines winner and loser
 function result() {
   if (tie > playerScore && tie > computerScore) {
@@ -52,4 +54,33 @@ function result() {
     console.log("You lose the game!");
   }
 }
-game();
+// game();
+
+// creates three buttons
+function createButtons() {
+  const rockButton = document.createElement("button");
+  const paperButton = document.createElement("button");
+  const scissorButton = document.createElement("button");
+
+  rockButton.innerText = "Rock";
+  paperButton.innerText = "Paper";
+  scissorButton.innerText = "Scissors";
+
+  document.body.appendChild(rockButton);
+  document.body.appendChild(paperButton);
+  document.body.appendChild(scissorButton);
+
+  rockButton.addEventListener("click", () => {
+    alert("Rock");
+  });
+
+  paperButton.addEventListener("click", () => {
+    alert("Paper");
+  });
+
+  scissorButton.addEventListener("click", () => {
+    alert("Scissor");
+  });
+}
+
+createButtons();
