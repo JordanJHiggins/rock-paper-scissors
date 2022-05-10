@@ -71,15 +71,15 @@ function createButtons() {
   document.body.appendChild(scissorButton);
 
   rockButton.addEventListener("click", () => {
-    alert("Rock");
+    playRound("Rock", computerPlay());
   });
 
   paperButton.addEventListener("click", () => {
-    alert("Paper");
+    playRound("Paper", computerPlay());
   });
 
   scissorButton.addEventListener("click", () => {
-    alert("Scissor");
+    playRound("Scissors", computerPlay());
   });
 }
 
