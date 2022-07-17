@@ -84,3 +84,12 @@ function createButtons() {
 }
 
 createButtons();
+
+// tracks score
+function scoreBoard(result) {
+  if (result === "You win the game!") {
+    playerScore++;
+  } else if (result === "You lose the game!") {
+    computerScore++;
+  }
+}
