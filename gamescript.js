@@ -16,16 +16,16 @@ function playRound(playerSelection, computerSelection) {
       `You picked ${playerSelection} and your opponent picked ${computerSelection}. It's a tie!`
     );
   } else if (playerSelection === "Paper" && computerSelection === "Rock") {
-    playerScore = playerScore++;
+    playerScore++;
     console.log("Rock beats paper.You win!");
   } else if (playerSelection === "Scissors" && computerSelection === "Paper") {
-    playerScore = playerScore++;
+    playerScore++;
     console.log("Rock beats paper. You win!");
   } else if (playerSelection === "Rock" && computerSelection === "Scissors") {
-    playerScore = playerScore++;
+    playerScore++;
     console.log("Rock beats paper. You win!");
   } else {
-    computerScore = computerScore++;
+    computerScore++;
     console.log(`${computerSelection} beats ${playerSelection}. You lose!`);
   }
 }
@@ -79,3 +79,13 @@ function createButtons() {
 }
 
 createButtons();
+
+function scoreBoard() {
+  const playerScoreMessage = document.createElement("div");
+
+  playerScoreMessage.innerText = `Player: ${playerScore}`;
+
+  document.body.appendChild(playerScoreMessage);
+}
+
+scoreBoard();
